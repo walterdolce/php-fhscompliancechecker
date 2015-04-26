@@ -1,0 +1,11 @@
+# IDE
+.idea/
+
+# OS
+.DS_Store
+
+# Project
+!bin/fhscompliancechecker
+bin/
+composer.phar
+vendor/

@@ -1,0 +1,19 @@
+{
+  "name": "walterdolce/php-fhscompliancechecker",
+  "version": "1.0.0",
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "require-dev": {
+    "behat/behat": "3.0.15",
+    "phpspec/phpspec": "2.2.0"
+  },
+  "config": {
+    "bin-dir": "bin"
+  },
+  "autoload": {
+    "psr-0": {
+      "": "src"
+    }
+  }
+}

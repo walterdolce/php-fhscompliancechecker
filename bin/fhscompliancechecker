@@ -1,0 +1,24 @@
+#!/usr/local/bin/env php
+<?php
+/**
+ * @author Walter Dolce <walterdolce@gmail.com>
+ */
+use FHSComplianceChecker\DefaultDirectory;
+
+$load = function ($file) {
+    if (file_exists($file)) {
+        return include $file;
+    }
+};
+
+if ((!$loader = $load(__DIR__.'/../vendor/autoload.php'))
+    && (!$loader = $load(__DIR__.'/../../../autoload.php'))
+) {
+    exit(FHSComplianceChecker::UNDEFINED);
+}
+
+exit((new FHSComplianceChecker(
+    new DefaultDirectory(
+        array_pop($argv)
+    )
+))->isCompliant());
